@@ -4,16 +4,19 @@
 
 """
 
-def my_sum(my_digits, start=0):
-    result = start + sum([int(i) for i in my_digits.split()])
-    
-    return result
-    
-    
+
+def my_sum(*my_digits, start=0):
+    my_array = []
+    for i in my_digits[0]:
+        my_array.append(int(i))
+    return sum(my_array, start)
+
+
 def main():
-    my_digits = input('Enter digits through space: ')
+    my_digits = input("Enter digits through space: ").split()
+
     print(my_sum(my_digits))
-    
+
 
 if __name__ == "__main__":
     main()

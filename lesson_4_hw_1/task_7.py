@@ -7,10 +7,10 @@
 def sum(numbers):
 
     sum = 0
-    for i in range(len(numbers)):
-        d = ord(numbers[i]) - ord("0")
+    for i in numbers:
+        d = ord(i) - ord("0")
         sum = d + sum
-        i = i + 1
+
     return f"Sum of digits is {sum}"
 
 
