@@ -6,16 +6,16 @@
 
 
 def my_sum(*my_digits, start=0):
-    my_array = []
-    for i in my_digits[0]:
-        my_array.append(int(i))
-    return sum(my_array, start)
+    return sum(my_digits[0], start)
 
 
 def main():
     my_digits = input("Enter digits through space: ").split()
+    my_array = []
+    for i in my_digits:
+        my_array.append(int(i))
 
-    print(my_sum(my_digits))
+    print(my_sum(my_array))
 
 
 if __name__ == "__main__":
