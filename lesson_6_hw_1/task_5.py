@@ -7,30 +7,21 @@ calculate_wheat_chess_position(kilograms)  # prints 'b3'
 
 """
 
-
-from math import *
-
+ONE_SEED_WEIGHT = 0.035
 def calculate_wheat_chess_position(kilograms):
- 
     step = 8
-    num = 0
     quantity = 1
     result = 0
-
+    chess_cage_seed = kilograms / ONE_SEED_WEIGHT
     for i in range(1,9):
-        kilograms
+        
         for letter in ['a','b','c','d','e','f','g','h']:
             if i <= step:               
                 result =f"{letter}{i}"            
-            else:
-                result =f"{letter}{i- num}"                
-            if kilograms <= (quantity * 0.03584):
+            if chess_cage_seed <= quantity:
                 return result 
-
             quantity *= 2
-    num = num + step 
-  
-
+   
 def main():
     entered_kilograms = float(input('Enter kg: '))
     
